@@ -2,12 +2,15 @@ package com.bikkadIt;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class GitAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GitAppApplication.class, args);
+	ConfigurableApplicationContext context=	SpringApplication.run(GitAppApplication.class, args);
+	context.close();
+	
 	}
 
 }
